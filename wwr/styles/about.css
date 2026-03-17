@@ -1,0 +1,149 @@
+/* Header: logo left, title center, nav right */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  background-color: #eee;
+}
+
+/* Logo styling */
+header img {
+  grid-column: 1;
+  width: 80px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+/* Title styling */
+header h1 {
+  grid-column: 2;
+  margin: 0;
+  font-size: 2rem;
+  color: gray;
+  text-align: flex-start;
+}
+
+/* Nav styling */
+header nav {
+  grid-column: 3;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: lightslategray;
+}
+
+/* History section grid */
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: lightgray;
+  color: black;
+}
+
+.history img {
+  width: 300px; /* Keep only one width definition */
+  margin: 1em;
+  border: 1px solid #EEE;
+  padding: 1em;
+  border-radius: 8px;
+}
+
+/* Adventures section layout */
+.adventures {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: start;
+  padding: 2rem 0;
+}
+
+.adventures figure {
+  flex: 1 1 18%;
+  max-width: 200px;
+  margin: 0;
+  text-align: center;
+}
+
+.adventures img {
+  width: 200px; /* Keep only one width definition */
+  height: auto;
+  border-radius: 10px; 
+  border: 1px solid #EEE;
+  padding: 1em;
+  background-color: darkslategray;
+  color: #EEE;
+  text-align: center;
+}
+
+.adventures figcaption {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: black;
+}
+
+/* Footer layout */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: grey;
+  color: black;
+}
+
+footer .socialmedia {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+footer .socialmedia img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+footer .socialmedia img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 700px) {
+  header {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    text-align: center;
+  }
+  header img, header h1, header nav {
+    grid-column: 1;
+  }
+  .history {
+    grid-template-columns: 1fr;
+  }
+  .adventures {
+    flex-direction: column;
+    align-items: center;
+  }
+}
