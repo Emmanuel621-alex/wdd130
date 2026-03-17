@@ -4,7 +4,7 @@ header {
   grid-template-columns: auto 1fr auto;
   align-items: flex-start;
   padding: 1rem 2rem;
-  background-color: #eee;
+  background-color: gainsboro;
 }
 
 /* Logo styling */
@@ -20,7 +20,7 @@ header h1 {
   grid-column: 2;
   margin: 0;
   font-size: 2rem;
-  color: gray;
+  color:black;
   text-align: flex-start;
 }
 
@@ -56,7 +56,7 @@ nav a:hover {
   align-items: center;
   gap: 2rem;
   padding: 2rem;
-  background-color: lightgray;
+  background-color: rgb(124, 137, 252);
   color: black;
 }
 
@@ -73,25 +73,24 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: start;
   padding: 2rem 0;
 }
 
 .adventures figure {
   flex: 1 1 18%;
-  max-width: 200px;
+  max-width: 300px;
   margin: 0;
   text-align: center;
 }
 
 .adventures img {
-  width: 200px; /* Keep only one width definition */
+  width: 235px; /* Keep only one width definition */
   height: auto;
-  border-radius: 10px; 
+  border-radius: 50px; 
   border: 1px solid #EEE;
   padding: 1em;
-  background-color: darkslategray;
   color: #EEE;
   text-align: center;
 }
@@ -108,7 +107,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: grey;
+  background-color: gainsboro;
   color: black;
 }
 
