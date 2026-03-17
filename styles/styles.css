@@ -1,3 +1,21 @@
+ body, h1{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: steelblue;
+    color: #ffffff; 
+    padding: 10px 20px;
+    text-align: flex-start;
+}
 nav{
     background-color: steelblue;
     padding: 10px;
@@ -8,7 +26,7 @@ nav a {
     padding: 10px;
     display: block;
 }
-
+ 
 h1{
     color: steelblue;
 }
@@ -28,7 +46,7 @@ p{
 }
 
 aside{
-    width:20em;
+    width:30em;
     margin: 1em;
     border: 1px solid rgba(0,0,0,0.2);
     padding: 1em;
@@ -38,14 +56,26 @@ aside{
 }
 
     aside img{
-        width: 200px;
+        width: 300px;
         height: auto;
     }
 
-    footer{
-        margin-top: 1em;
-        border-top: 1px solid #000;
-        text-align: center;
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
     }
 
+    main, aside {
+        padding: 10px;
+    }
+}
 
