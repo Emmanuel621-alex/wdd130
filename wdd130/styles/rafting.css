@@ -1,0 +1,154 @@
+/* Universal reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables */
+:root {
+    --primary-color: steelblue;
+    --accent-color: #35424a;
+    --text-color: #333;
+    --light-bg: #f4f4f4;
+    --aside-bg: #eee;
+    --nav-text: #e0e0e0;        /* slightly darker for contrast */
+    --footer-text: #f0f0f0;     /* slightly darker for contrast */
+    --h1-color: #005f99;        /* darker steelblue for contrast */
+}
+
+/* Body and headings */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+h1 {
+    color: var(--h1-color);
+}
+
+/* Header & Nav */
+header {
+    background: var(--primary-color);
+    color: var(--footer-text);
+    padding: 10px 20px;
+    text-align: left;
+}
+
+nav {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+nav a {
+    color: var(--nav-text);
+    padding: 10px;
+    display: block;
+    text-decoration: none; /* removes underlines */
+}
+
+/* Hero section */
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* space between h1 and article */
+    padding: 20px;
+}
+
+.hero h1 {
+    background: rgba(0,0,0,0.4);
+    color: #fff;
+    padding: 5px 10px;
+    width: fit-content;
+}
+
+.hero article {
+    background: rgba(255,255,255,0.8);
+    padding: 10px;
+    overflow: hidden; /* contain floated images */
+}
+
+.hero article img:first-of-type {
+    float: left;
+    margin-right: 10px;
+    max-width: 40%;
+}
+
+.hero article img:last-of-type {
+    float: right;
+    margin-left: 10px;
+    max-width: 40%;
+}
+
+/* Main images outside hero */
+main img:not(.hero article img) {
+    width: 150px;
+    height: auto;
+    border: 1px solid var(--primary-color);
+    padding: 2px;
+    box-shadow: 0 0 30px gray;
+}
+
+/* Paragraph spacing */
+p {
+    padding: 0.5em 0;
+}
+
+/* Aside */
+aside {
+    width: 30em;
+    margin: 1em;
+    border: 1px solid rgba(0,0,0,0.2);
+    padding: 1em;
+    background-color: var(--aside-bg);
+    color: var(--text-color);
+    text-align: center;
+}
+
+aside img {
+    width: 300px;
+    height: auto;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: var(--accent-color);
+    color: var(--footer-text);
+    position: relative;
+}
+
+/* Social media links if added later */
+.socialmedia a {
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main, aside {
+        padding: 10px;
+    }
+
+    .hero article img {
+        float: none;
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 100%;
+    }
+
+    .hero h1 {
+        width: 100%;
+        background: none;
+        color: var(--h1-color);
+        padding: 0;
+        margin-bottom: 10px;
+    }
+}
