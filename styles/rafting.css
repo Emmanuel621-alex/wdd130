@@ -43,17 +43,16 @@ main img {
     box-shadow: 0 0 30px gray;
 }
 
-/* ASIDE */
-aside {
-    margin: 1em;
-    padding: 1em;
-}
-
-/* ASIDE IMAGE (REQUIRED EXACT) */
-aside img {
-    width: 200px;
-    height: auto;
-}
+/* Aside */
+ aside
+  { 
+    width: 30em; margin: 1em; border: 1px solid rgba(0,0,0,0.2);
+    padding: 1em; background-color: var(--aside-bg); 
+    text-align:center;
+ }
+ aside img {
+    width: 300px; height: auto;
+ }
 
 /* PARAGRAPH (REQUIRED EXACT) */
 p {
