@@ -5,309 +5,75 @@
     box-sizing: border-box;
 }
 
-/* CSS Variables */
-:root {
-    --primary-color: steelblue;
-    --accent-color: #35424a;
-    --text-color: #333;
-    --light-bg: #f4f4f4;
-    --aside-bg: #eee;
-    --nav-text: #e0e0e0;
-    --footer-text: #f0f0f0;
-    --h1-color: #005f99;
-}
-
 /* Body */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--light-bg);
-    color: var(--text-color);
 }
 
-/* Headings */
-h1 {
-    color: var(--h1-color);
-}
-
-/* Header & Nav */
-header {
-    background: var(--primary-color);
-}
-
+/* NAV (REQUIRED) */
 nav {
-    display: flex;              /* FIX: horizontal nav */
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 10px 20px;
+    background-color: steelblue;
+    padding: 10px;
 }
 
 nav a {
-    color: var(--nav-text);
+    display: block;
+    color: white;
+    padding: 10px;
     text-decoration: none;
-    padding: 8px;
 }
 
-/* Hero section */
+/* MAIN (REQUIRED) */
+main {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+/* HERO */
 .hero {
-    position: relative;        /* FIX: required for overlays */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     padding: 20px;
 }
 
-.hero h1 {
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 5px 10px;
-    width: fit-content;
-}
-
-.hero article {
-    background: rgba(255,255,255,0.8);
-    padding: 10px;
-    overflow: hidden;
-}
-
-.hero article img:first-of-type {
-    float: left;
-    margin-right: 10px;
-    max-width: 40%;
-}
-
-/* FIX: simpler valid selector */
-main img:not(.hero img) {
+/* MAIN IMAGES (REQUIRED) */
+main img {
     width: 150px;
     height: auto;
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
 
-/* Paragraph spacing */
-p {
-    padding: 0.5em 0;
-}
-
-/* Aside */
+/* ASIDE */
 aside {
-    width: 30em;
     margin: 1em;
-    border: 1px solid rgba(0,0,0,0.2);
     padding: 1em;
-    background-color: var(--aside-bg);
-    text-align: center;
 }
 
+/* ASIDE IMAGE (REQUIRED EXACT) */
 aside img {
-    width: 300px;
+    width: 200px;
     height: auto;
 }
 
-/* Footer */
-footer {
-    display: flex;                 /* FIX: layout */
-    justify-content: space-between; /* text left, icons right */
-    align-items: center;
-    padding: 10px 20px;
-    background: var(--accent-color);
-    color: var(--footer-text);
-}
-
-/* Social media */
-.socialmedia {
-    display: flex;
-    gap: 10px;
-}
-
-.socialmedia img {
-    width: 30px;
-    height: auto;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .hero article img {
-        float: none;
-        display: block;
-        margin: 0 auto 10px;
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        width: 100%;
-        background: none;
-        color: var(--h1-color);
-    }
-}/* Universal reset */
-* {
-    margin: 0;
+/* PARAGRAPH (REQUIRED EXACT) */
+p {
     padding: 0;
-    box-sizing: border-box;
 }
 
-/* CSS Variables */
-:root {
-    --primary-color: steelblue;
-    --accent-color: #35424a;
-    --text-color: #333;
-    --light-bg: #f4f4f4;
-    --aside-bg: #eee;
-    --nav-text: #e0e0e0;
-    --footer-text: #f0f0f0;
-    --h1-color: #005f99;
-}
-
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--light-bg);
-    color: var(--text-color);
-}
-
-/* Headings */
-h1 {
-    color: var(--h1-color);
-}
-
-/* Header & Nav */
-header {
-    background: var(--primary-color);
-}
-
-nav {
-    display: flex;              /* FIX: horizontal nav */
-    justify-content: flex-start;
-    gap: 15px;
-    padding: 10px 20px;
-}
-
-nav a {
-    color: var(--nav-text);
-    text-decoration: none;
-    padding: 8px;
-}
-
-/* Hero section */
-.hero {
-    position: relative;        /* FIX: required for overlays */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-}
-
-.hero h1 {
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 5px 10px;
-    width: fit-content;
-}
-
-.hero article {
-    background: rgba(255,255,255,0.8);
-    padding: 10px;
-    overflow: hidden;
-}
-
-.hero article img:first-of-type {
-    float: left;
-    margin-right: 10px;
-    max-width: 40%;
-}
-
-/* FIX: simpler valid selector */
-main img:not(.hero img) {
-    width: 150px;
-    height: auto;
-    border: 1px solid var(--primary-color);
-    padding: 2px;
-    box-shadow: 0 0 30px gray;
-}
-
-/* Paragraph spacing */
-p {
-    padding: 0.5em 0;
-}
-
-/* Aside */
-aside {
-    width: 30em;
-    margin: 1em;
-    border: 1px solid rgba(0,0,0,0.2);
-    padding: 1em;
-    background-color: var(--aside-bg);
+/* FOOTER (REQUIRED) */
+footer {
+    margin-top: 15px;
+    border-top: 1px solid black;
     text-align: center;
 }
 
-aside img {
-    width: 300px;
-    height: auto;
-}
-
-/* Footer */
-footer {
-    display: flex;                 /* FIX: layout */
-    justify-content: space-between; /* text left, icons right */
-    align-items: center;
-    padding: 10px 20px;
-    background: var(--accent-color);
-    color: var(--footer-text);
-}
-
-/* Social media */
+/* SOCIAL MEDIA */
 .socialmedia {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
 }
 
 .socialmedia img {
     width: 30px;
-    height: auto;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-
-    .hero article img {
-        float: none;
-        display: block;
-        margin: 0 auto 10px;
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        width: 100%;
-        background: none;
-        color: var(--h1-color);
-    }
 }
