@@ -1,152 +1,78 @@
+/* Universal reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: steelblue;
-    --accent-color: #35424a;
-    --text-color: #333;
-    --light-bg: #f4f4f4;
-    --aside-bg: #eee;
-    --nav-text: #e0e0e0;
-    --footer-text: #f0f0f0;
-    --h1-color: #005f99;
-}
-
+/* Body */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: var(--light-bg);
-    color: var(--text-color);
 }
 
-h1 {
-    color: var(--h1-color);
-}
-
-header {
-    background: var(--primary-color);
-}
-
+/* NAV (REQUIRED) */
 nav {
-    display: flex;
-    gap: 15px;
-    padding: 10px 20px;
-    background-color: var(--primary-color);
+    background-color: steelblue;
+    padding: 10px;
 }
 
 nav a {
     display: block;
-    color: var(--nav-text);
+    color: white;
     padding: 10px;
     text-decoration: none;
 }
 
+/* MAIN (REQUIRED) */
 main {
     max-width: 840px;
     margin: 0 auto;
 }
 
+/* HERO */
 .hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
     padding: 20px;
 }
 
-.hero h1 {
-    background: rgba(0,0,0,0.4);
-    color: #fff;
-    padding: 5px 10px;
-    width: fit-content;
-}
-
-.hero article {
-    background: rgba(255,255,255,0.8);
-    padding: 10px;
-    overflow: hidden;
-}
-
-.hero article img {
-    float: left;
-    margin-right: 10px;
-    max-width: 40%;
-}
-
+/* MAIN IMAGES (REQUIRED) */
 main img {
     width: 150px;
     height: auto;
-    border: 1px solid var(--primary-color);
+    border: 1px solid black;
     padding: 2px;
     box-shadow: 0 0 30px gray;
 }
 
+/* Aside */
+ aside
+  { 
+    width: 30em; margin: 1em; border: 1px solid rgba(0,0,0,0.2);
+    padding: 1em; background-color: var(--aside-bg); 
+    text-align:center;
+ }
+ aside img {
+    width: 200px; height: auto;
+ }
+
+/* PARAGRAPH (REQUIRED EXACT) */
 p {
     padding: 0;
 }
 
-aside {
-    width: 30em;
-    margin: 1em;
-    border: 1px solid rgba(0,0,0,0.2);
-    padding: 1em;
-    background-color: var(--aside-bg);
-    text-align: center;
-}
-
-aside img {
-    width: 200px;
-    height: auto;
-}
-
+/* FOOTER (REQUIRED) */
 footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 15px;
-    border-top: 1px solid #000;
+    border-top: 1px solid black;
     text-align: center;
-    padding: 10px 20px;
-    background: var(--accent-color);
-    color: var(--footer-text);
 }
 
+/* SOCIAL MEDIA */
 .socialmedia {
     display: flex;
+    justify-content: flex-end;
     gap: 10px;
 }
 
 .socialmedia img {
     width: 30px;
-}
-
-.socialmedia a {
-    text-decoration: none;
-}
-
-@media (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero article img {
-        float: none;
-        display: block;
-        margin: 0 auto 10px;
-        max-width: 100%;
-    }
-
-    .hero h1 {
-        width: 100%;
-        background: none;
-        color: var(--h1-color);
-    }
 }
