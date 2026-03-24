@@ -1,0 +1,268 @@
+/* GENERAL STYLES */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #eee;
+}
+
+/* Header: logo left, title center, nav right */
+header {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: flex-start;
+  padding: 1rem 2rem;
+  background-color: #eee;
+
+}
+
+/* Logo styling */
+header img {
+  grid-column: 1;
+  width: 80px;
+  height: auto;
+  margin-right: 1rem;
+}
+
+/* Title styling */
+header h1 {
+  grid-column: 2;
+  margin: 0;
+  font-size: 2rem;
+  color: gray;
+  text-align: flex-start;
+}
+
+/* Nav styling */
+header nav {
+  grid-column: 3;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-start;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: lightslategray;
+}
+
+/* HERO SECTION */
+.hero, .trips-hero {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2rem;
+  background: #fff;
+  padding: 2rem;
+}
+.hero img, .trips-hero img {
+  width: 100%;
+  border-radius: 12px;
+}
+.hero h1, .trips-hero h1 {
+  font-size: 2.5rem;
+  color: #350bf1;
+  margin: 0;
+}
+.hero p, .trips-hero p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background: lightblue;
+  padding: 1rem;
+  text-align: center;
+  margin: 2rem 0;
+}
+.newsletter input[type="email"] {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.newsletter button {
+  padding: 0.5rem 1rem;
+  background: #350bf1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  display: inline-block;
+  background: #350bf1;
+  color: #fff;
+  padding: 0.7rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: background 0.3s;
+}
+.cta-button:hover {
+  background: #2e7d32;
+}
+
+/* GRID INFO SECTION */
+.grid-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.grid-info div {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.grid-info img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+/* TRIPS LIST */
+.trips-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+.trip-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+.trip-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+.trip-card h3 {
+  margin: 0.5rem 0;
+  color: #350bf1;
+}
+.trip-card p {
+  color: #333;
+}
+/* HISTORY SECTION */
+.history {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: darkgray;
+  color: rgb(14, 13, 13);
+}
+
+.history img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* ADVENTURES SECTION */
+.adventures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #eee;
+}
+
+.adventures figure {
+  width: 180px;
+  margin: 0;
+  text-align: center;
+}
+
+.adventures img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.employee-profiles {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* allows wrapping on smaller screens */
+  margin-top: 20px;
+}
+
+.employee-profiles figure {
+  text-align: center;
+  max-width: 200px;
+  margin: 0;
+}
+
+.employee-profiles img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* makes the images circular */
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* keeps image perfectly square */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.employee-profiles figcaption {
+  margin-top: 10px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.employee-profiles figcaption span {
+  display: block;
+  font-weight: normal;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+
+.adventures figcaption {
+  margin-top: 0.5rem;
+  font-style: italic;
+  color: #eee;
+}
+
+/* FOOTER STYLES */
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
+  color: rgb(0, 0, 0);
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer .socialmedia a img {
+  height: 24px;
+  margin-left: 10px;
+  vertical-align: middle;
+}
