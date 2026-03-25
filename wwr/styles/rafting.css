@@ -38,9 +38,15 @@ header img {
     width: 60px;
 }
 
+/* SUPPORTS BOTH nav styles (ul and direct links) */
 nav ul {
     display: flex;
     list-style: none;
+    gap: 15px;
+}
+
+header nav {
+    display: flex;
     gap: 15px;
 }
 
@@ -56,7 +62,7 @@ main {
     margin: 0 auto;
 }
 
-/* HERO (ABOUT PAGE) */
+/* HERO */
 .hero {
     position: relative;
 }
@@ -139,7 +145,7 @@ main {
     font-style: italic;
 }
 
-/* EMPLOYEES (CONTACT PAGE) */
+/* EMPLOYEES */
 .employee-profiles {
     display: flex;
     justify-content: center;
@@ -171,7 +177,7 @@ main {
     color: #666;
 }
 
-/* FORM (CONTACT PAGE) */
+/* FORM */
 form {
     margin-top: 20px;
 }
@@ -190,7 +196,7 @@ button {
     cursor: pointer;
 }
 
-/* FOOTER */
+/* FOOTER (FIXED) */
 footer {
     display: flex;
     justify-content: space-between;
@@ -199,11 +205,17 @@ footer {
     padding: 10px 20px;
     background: var(--accent-color);
     color: var(--footer-text);
+    flex-wrap: wrap;
 }
 
-footer img {
+/* THIS IS THE IMPORTANT FIX */
+footer nav.socialmedia {
+    display: flex;
+    gap: 10px;
+}
+
+footer nav.socialmedia a img {
     width: 24px;
-    margin-left: 10px;
 }
 
 /* RESPONSIVE */
@@ -222,6 +234,10 @@ footer img {
         flex-direction: column;
     }
 
+    header nav {
+        flex-direction: column;
+    }
+
     .hero article img {
         float: none;
         display: block;
@@ -237,5 +253,6 @@ footer img {
     footer {
         flex-direction: column;
         gap: 10px;
+        text-align: center;
     }
 }
