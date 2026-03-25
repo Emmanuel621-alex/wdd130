@@ -4,8 +4,7 @@
     box-sizing: border-box;
 }
 
-:root 
-{
+:root {
     --primary-color: steelblue;
     --accent-color: #35424a;
     --text-color: #333;
@@ -26,6 +25,7 @@ h1 {
     color: var(--h1-color);
 }
 
+/* HEADER */
 header {
     display: flex;
     align-items: center;
@@ -50,47 +50,47 @@ nav a {
     padding: 10px;
 }
 
-main 
-{
+/* MAIN */
+main {
     max-width: 900px;
     margin: 0 auto;
-  }
+}
 
-/* HERO (CRITICAL FIX) */
+/* HERO (ABOUT PAGE) */
 .hero {
-  position: relative;
+    position: relative;
 }
 
 .hero img {
-  width: 100%;
-  display: block;
+    width: 100%;
+    display: block;
 }
 
 .hero h1 {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  color: white;
-  background: rgba(0,0,0,0.5);
-  padding: 0.5rem 1rem;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    background: rgba(0,0,0,0.5);
+    padding: 0.5rem 1rem;
 }
 
 .hero article {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  background: white;
-  padding: 1rem;
-  max-width: 400px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: white;
+    padding: 1rem;
+    max-width: 400px;
 }
 
 .hero article img {
-  float: right; /* REQUIRED */
-  width: 100px;
-  margin-left: 10px;
+    float: right;
+    width: 100px;
+    margin-left: 10px;
 }
 
-/* HISTORY SECTION */
+/* HISTORY */
 .history {
     margin-top: 30px;
 }
@@ -99,36 +99,21 @@ main
     text-align: center;
     margin-bottom: 15px;
 }
-.history-content
- {
+
+.history-content {
     display: grid;
-    grid-template-columns: 1fr 2fr; /* Image takes 1 fraction, text takes 2 fractions */
-    gap: 20px;                     /* Space between image and text */
-    align-items: center;           /* Vertically center image and text */
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    align-items: center;
 }
 
 .history-content img {
-    width: 100%;                  /* Image fills its column */
-    height: auto;
+    width: 100%;
     border: 2px solid var(--primary-color);
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-.history-content p {
-    line-height: 1.8;
-}
-
-/* RESPONSIVE: stack vertically on small screens */
-@media (max-width: 700px) {
-    .history-content {
-        grid-template-columns: 1fr; /* Only one column on small screens */
-    }
-
-    .history-content img {
-        margin-bottom: 15px;
-    }
-}
-/* ADVENTURES SECTION */
+/* ADVENTURES */
 .adventures {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -147,7 +132,62 @@ main
 
 .adventures img {
     width: 100%;
-    height: auto;
+}
+
+.adventures figcaption {
+    margin-top: 0.5rem;
+    font-style: italic;
+}
+
+/* EMPLOYEES (CONTACT PAGE) */
+.employee-profiles {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.employee-profiles figure {
+    text-align: center;
+    max-width: 200px;
+}
+
+.employee-profiles img {
+    width: 100%;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.employee-profiles figcaption {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.employee-profiles span {
+    display: block;
+    font-weight: normal;
+    color: #666;
+}
+
+/* FORM (CONTACT PAGE) */
+form {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
 
 /* FOOTER */
@@ -161,13 +201,9 @@ footer {
     color: var(--footer-text);
 }
 
-.socialmedia {
-    display: flex;
-    gap: 10px;
-}
-
-.socialmedia img {
-    width: 30px;
+footer img {
+    width: 24px;
+    margin-left: 10px;
 }
 
 /* RESPONSIVE */
@@ -176,8 +212,8 @@ footer {
         grid-template-columns: 1fr;
     }
 
-    .history-content img {
-        margin-bottom: 15px;
+    .adventures {
+        grid-template-columns: 1fr 1fr;
     }
 }
 
@@ -189,19 +225,13 @@ footer {
     .hero article img {
         float: none;
         display: block;
-        margin: 0 auto 10px;
-        max-width: 100%;
+        margin: 0 auto;
     }
 
     .hero h1 {
         position: static;
         background: none;
         color: var(--h1-color);
-        width: 100%;
-    }
-
-    .adventures {
-        grid-template-columns: 1fr 1fr;
     }
 
     footer {
