@@ -2,23 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="Explore our rafting trips and adventures for all skill levels.">
+  <meta name="description" content="Contact Us for White Water Rafting trips, adventures, and bookings.">
+  <meta name="author" content="Emmanuel Edache Alexander">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rafting Trips | White Water Rafting</title>
+  <title>Contact Us | White Water Rafting</title>
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <img src="images/logo.jpg" alt="Rafting Logo">
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main>
+    <!-- HERO SECTION -->
     <section class="trips-hero">
       <img src="images/adventure5.jpg" alt="Rafting Adventure">
       <div>
@@ -27,6 +31,7 @@
       </div>
     </section>
 
+    <!-- TRIPS LIST -->
     <section class="trips-list">
       <div class="trip-card">
         <img src="images/adventure1.jpg" alt="Beginner Rafting">
@@ -47,10 +52,40 @@
         <a href="contact.html" class="cta-button">Book Now</a>
       </div>
     </section>
+
+    <!-- AUDIT COMPLIANT FORM -->
+    <section>
+      <h2>Contact Us to Book a Trip</h2>
+      <form>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <fieldset>
+          <legend>Trip Level:</legend>
+          <label><input type="radio" id="beginner" name="trip-level" value="Beginner" required> Beginner</label>
+          <label><input type="radio" id="intermediate" name="trip-level" value="Intermediate"> Intermediate</label>
+          <label><input type="radio" id="advanced" name="trip-level" value="Advanced"> Advanced</label>
+        </fieldset><br>
+
+        <label for="message">Your Message:</label><br>
+        <textarea id="message" name="message" rows="5" required></textarea><br><br>
+
+        <label>
+          <input type="checkbox" id="subscribe" name="subscribe">
+          Please subscribe me to the monthly newsletter
+        </label><br><br>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2026 White Water Rafting | Emmanuel Edache Alexander </p>
+    <p>&copy; 2026 White Water Rafting | Emmanuel Edache Alexander</p>
     <nav class="socialmedia">
       <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="#"><img src="images/twitter.png" alt="Twitter"></a>

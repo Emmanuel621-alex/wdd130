@@ -1,9 +1,11 @@
-*{
+/* ================= UNIVERSAL RESET ================= */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* ================= VARIABLES ================= */
 :root {
     --primary-color: steelblue;
     --accent-color: #35424a;
@@ -14,6 +16,7 @@
     --h1-color: #005f99;
 }
 
+/* ================= BODY ================= */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -25,7 +28,7 @@ h1 {
     color: var(--h1-color);
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     display: flex;
     align-items: center;
@@ -49,47 +52,39 @@ nav a {
     padding: 10px;
 }
 
-/* MAIN */
+/* ================= MAIN ================= */
 main {
     max-width: 900px;
     margin: 0 auto;
+    padding: 20px;
 }
 
-/* HERO */
-.hero {
+/* ================= HERO (index.html & trips.html) ================= */
+.hero,
+.trips-hero {
     position: relative;
+    text-align: center;
 }
 
-.hero img {
+.hero img,
+.trips-hero img {
     width: 100%;
     display: block;
 }
 
-.hero h1 {
+.hero div,
+.trips-hero div {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
     color: white;
     background: rgba(0,0,0,0.5);
-    padding: 0.5rem 1rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
 }
 
-.hero article {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: white;
-    padding: 1rem;
-    max-width: 400px;
-}
-
-.hero article img {
-    float: right;
-    width: 100px;
-    margin-left: 10px;
-}
-
-/* HISTORY */
+/* ================= HISTORY ================= */
 .history {
     margin-top: 30px;
 }
@@ -112,7 +107,7 @@ main {
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* ADVENTURES */
+/* ================= ADVENTURES ================= */
 .adventures {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -138,7 +133,52 @@ main {
     font-style: italic;
 }
 
-/* EMPLOYEES */
+/* ================= TRIPS LIST ================= */
+.trips-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.trip-card {
+    max-width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.trip-card img {
+    width: 100%;
+}
+
+.trip-card h3 {
+    margin-top: 10px;
+}
+
+.trip-card p {
+    padding: 0 10px;
+}
+
+.trip-card .cta-button {
+    display: inline-block;
+    margin: 10px 0 15px 0;
+    padding: 10px 20px;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.trip-card .cta-button:hover {
+    background: darkblue;
+}
+
+/* ================= EMPLOYEE PROFILES ================= */
 .employee-profiles {
     display: flex;
     justify-content: center;
@@ -170,26 +210,74 @@ main {
     color: #666;
 }
 
-/* FORM */
+/* ================= FORM (CONTACT + NEWSLETTER) ================= */
 form {
     margin-top: 20px;
 }
 
-input, textarea {
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
     padding: 8px;
     margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+legend {
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 5px;
 }
 
 button {
     background: var(--primary-color);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 10px 15px;
     cursor: pointer;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 10px;
 }
 
-/* FOOTER */
+button:hover {
+    background: darkblue;
+}
+
+/* ================= NEWSLETTER ================= */
+.newsletter {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.newsletter input[type="email"] {
+    max-width: 300px;
+    display: inline-block;
+}
+
+.newsletter button {
+    display: inline-block;
+}
+
+/* ================= FOOTER ================= */
 footer {
     display: flex;
     justify-content: space-between;
@@ -210,7 +298,7 @@ footer nav.socialmedia img {
     width: 24px;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 700px) {
     .history-content {
         grid-template-columns: 1fr;
@@ -218,6 +306,15 @@ footer nav.socialmedia img {
 
     .adventures {
         grid-template-columns: 1fr 1fr;
+    }
+
+    .trips-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .trip-card {
+        max-width: 90%;
     }
 }
 
@@ -232,10 +329,19 @@ footer nav.socialmedia img {
         margin: 0 auto;
     }
 
-    .hero h1 {
+    .hero h1,
+    .trips-hero div {
         position: static;
+        transform: none;
         background: none;
         color: var(--h1-color);
+        padding: 0;
+    }
+
+    .newsletter input,
+    .newsletter button {
+        width: 90%;
+        max-width: 100%;
     }
 
     footer {

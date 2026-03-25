@@ -3,22 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="description" content="Home page for White Water Rafting Company. Adventure awaits!">
+  <meta name="author" content="Emmanuel Edache Alexander">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>White Water Rafting | Home</title>
+
+  <!-- FIXED TITLE -->
+  <title>Contact Us | White Water Rafting</title>
+
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
+
 <body>
   <header>
     <img src="images/logo.jpg" alt="Rafting Logo">
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
+      <a href="about.html">About Us</a>
       <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
   <main>
+    <!-- HERO -->
     <section class="hero">
       <img src="images/adventure3.jpg" alt="Rafting Adventure">
       <div>
@@ -27,20 +33,43 @@
       </div>
     </section>
 
+    <!-- REQUIRED FORM (FIXED) -->
     <section class="newsletter">
-      <h2>Subscribe to Our Newsletter</h2>
+      <h2>Contact Us Quickly</h2>
       <form>
-        <input type="email" placeholder="Your email address" required>
-        <button type="submit">Subscribe</button>
+        <label for="name">Your Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Your Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <fieldset>
+          <legend>Purpose:</legend>
+          <label><input type="radio" id="general" name="purpose" value="General Inquiry" required> General Inquiry</label>
+          <label><input type="radio" id="reservation" name="purpose" value="Reservation Question"> Reservation Question</label>
+          <label><input type="radio" id="suggestion" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+        </fieldset><br>
+
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+        <label>
+          <input type="checkbox" id="subscribe" name="subscribe">
+          Subscribe to newsletter
+        </label><br><br>
+
+        <button type="submit">Send Message</button>
       </form>
     </section>
 
+    <!-- CTA -->
     <section class="cta">
       <h2>Start Your Adventure</h2>
       <p>Join us for unforgettable rafting experiences on wild, scenic rivers.</p>
       <a href="trips.html" class="cta-button">View Trips</a>
     </section>
 
+    <!-- GRID INFO -->
     <section class="grid-info">
       <div>
         <img src="images/rafting1.jpg" alt="Rafting Team">
@@ -61,7 +90,8 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 White Water Rafting Co. | Emmanuel Edache Alexander </p>
+    <p>&copy; 2026 White Water Rafting | Emmanuel Edache Alexander</p>
+
     <nav class="socialmedia">
       <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
