@@ -38,13 +38,6 @@ header img {
     width: 60px;
 }
 
-/* SUPPORTS BOTH nav styles (ul and direct links) */
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 15px;
-}
-
 header nav {
     display: flex;
     gap: 15px;
@@ -196,7 +189,7 @@ button {
     cursor: pointer;
 }
 
-/* FOOTER (FIXED) */
+/* FOOTER */
 footer {
     display: flex;
     justify-content: space-between;
@@ -208,13 +201,12 @@ footer {
     flex-wrap: wrap;
 }
 
-/* THIS IS THE IMPORTANT FIX */
 footer nav.socialmedia {
     display: flex;
     gap: 10px;
 }
 
-footer nav.socialmedia a img {
+footer nav.socialmedia img {
     width: 24px;
 }
 
@@ -230,10 +222,6 @@ footer nav.socialmedia a img {
 }
 
 @media (max-width: 600px) {
-    nav ul {
-        flex-direction: column;
-    }
-
     header nav {
         flex-direction: column;
     }
