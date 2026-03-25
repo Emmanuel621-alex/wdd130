@@ -8,7 +8,6 @@
   <meta name="author" content="Emmanuel Edache Alexander">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us - White Water Rafting</title>
-  <!-- Updated CSS file to match W3C expected path -->
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
@@ -56,7 +55,10 @@
         <label for="message">Your Message:</label><br>
         <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
-        <label><input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly newsletter</label><br><br>
+        <label>
+          <input type="checkbox" id="subscribe" name="subscribe">
+          Please subscribe me to the monthly newsletter
+        </label><br><br>
 
         <button type="submit">Send Message</button>
       </form>
@@ -82,13 +84,17 @@
   </main>
 
   <footer>
-    <p>&copy; 2026 White Water Rafting | Emmanuel Edache Alexander 
-      <span class="social-links">
-        <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
-        <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
-        <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
-      </span>
-      | <a href="images/contact-wireframe.png" target="_blank">Contact Us Wireframe</a>
+    <p>&copy; 2026 White Water Rafting | Emmanuel Edache Alexander</p>
+
+    <!-- REQUIRED NAV (this fixes your error) -->
+    <nav class="socialmedia">
+      <a href="#"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="#"><img src="images/twitter.png" alt="Twitter"></a>
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+    </nav>
+
+    <p>
+      <a href="images/contact-wireframe.png" target="_blank">Contact Us Wireframe</a>
     </p>
   </footer>
 </body>
